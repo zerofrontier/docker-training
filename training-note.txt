@@ -1,0 +1,15 @@
+$ docker run -it ubuntu bash
+# run bash inside the ubuntu docker 
+# -i : Keep STDIN open even if not attached
+# -t : Allocate a pseudo-tty
+# -d : Run as a daemon such as working with a database
+
+# Run PostgreSQL under docker
+$ docker run -e POSTGRES_PASSWORD=mysecretpassword -p 127.0.0.1:80:80 -d postgres
+
+# Run docker compose
+$ docker-compose up
+
+# In a configuration, using 
+ports:
+ - "80:8000" is equal to - "0.0.0.0:80:8000"
